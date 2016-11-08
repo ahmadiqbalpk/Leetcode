@@ -1,0 +1,21 @@
+class Solution {
+public: // solution by Abdrashim Eldan, any question: eldan.abdrashim@gmail.com
+    vector<string> fizzBuzz(int n) { //If we look this method return vector <string>, it's say we work with vector;
+        vector <string> res; // creat vector, we know vector its a dynamic array, that works with pointers and ampersands
+        for(int i = 1; i <= n; i++){
+            if((i % 3 == 0)&&(i%5==0)){ // first check: if i devided to 3 and 5 then we push in stack FizzBuzz
+                res.push_back("FizzBuzz");
+            }
+            else if(i % 3 == 0){ // if i devided only to 3 then we push Fizz
+                res.push_back("Fizz");
+            }
+            else if(i % 5 == 0){
+                res.push_back("Buzz");
+            }
+            else{
+                res.push_back(to_string(i)); // and the last one, if all the check not true, then we push i but convert to string;
+            }
+        }
+        return res; // res, it's mean result.
+    }
+};
